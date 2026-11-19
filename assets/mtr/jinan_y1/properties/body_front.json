@@ -1,0 +1,64 @@
+{
+  "parts": [
+    {
+      "names": [
+        "shell"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "renderStage": "EXTERIOR"
+    },
+    {
+      "names": [
+        "salon",
+        "lcd_backing",
+        "tv_backing"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "renderStage": "INTERIOR"
+    },
+    {
+      "names": [
+        "lights"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "renderStage": "LIGHT"
+    },
+    {
+      "names": [
+        "headlights"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "renderStage": "ALWAYS_ON_LIGHT",
+      "condition": "ON_ROUTE_FORWARDS"
+    },
+    {
+      "names": [
+        "tail_lights"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "renderStage": "ALWAYS_ON_LIGHT",
+      "condition": "ON_ROUTE_BACKWARDS"
+    }
+  ],
+  "modelYOffset": 0,
+  "gangwayInnerSideResource": "mtr:jinan_y1/textures/gangway.png",
+  "gangwayInnerTopResource": "mtr:jinan_y1/textures/gangway.png",
+  "gangwayInnerBottomResource": "mtr:jinan_y1/textures/gangway.png",
+  "gangwayOuterSideResource": "mtr:jinan_y1/textures/gangway.png",
+  "gangwayOuterTopResource": "mtr:jinan_y1/textures/gangway.png",
+  "gangwayOuterBottomResource": "mtr:jinan_y1/textures/gangway.png",
+  "gangwayWidth": 1.35,
+  "gangwayHeight": 1.8960000000000001,
+  "gangwayYOffset": 1.054,
+  "gangwayZOffset": 0.5400000000000003
+}

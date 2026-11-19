@@ -1,0 +1,589 @@
+{
+  "vehicles": [
+    {
+      "id": "jinan_y1_front",
+      "name": "济南云巴1号线 · 旧版LCD | A端车 →",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "E7CD44",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -1.69,
+      "bogie2Position": 2.51,
+      "hasGangway1": false,
+      "hasGangway2": true,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    },
+    {
+      "id": "jinan_y1_rear",
+      "name": "济南云巴1号线 · 旧版LCD | B端车 ←",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "E7CD44",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -2.51,
+      "bogie2Position": 1.69,
+      "hasGangway1": true,
+      "hasGangway2": false,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    },
+    {
+      "id": "jinan_y1_wave_front",
+      "name": "济南云巴1号线（彩波纹） · 旧版LCD | A端车 →",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "8672BD",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -1.69,
+      "bogie2Position": 2.51,
+      "hasGangway1": false,
+      "hasGangway2": true,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car_wave.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas_wave.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_wave_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    },
+    {
+      "id": "jinan_y1_wave_rear",
+      "name": "济南云巴1号线（彩波纹） · 旧版LCD | B端车 ←",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "8672BD",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -2.51,
+      "bogie2Position": 1.69,
+      "hasGangway1": true,
+      "hasGangway2": false,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car_wave.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas_wave.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_wave_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    },
+    {
+      "id": "jinan_y1_metro_front",
+      "name": "济南云巴1号线 · 新版LCD | A端车 →",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "E7CD44",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -1.69,
+      "bogie2Position": 2.51,
+      "hasGangway1": false,
+      "hasGangway2": true,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    },
+    {
+      "id": "jinan_y1_metro_rear",
+      "name": "济南云巴1号线 · 新版LCD | B端车 ←",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "E7CD44",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -2.51,
+      "bogie2Position": 1.69,
+      "hasGangway1": true,
+      "hasGangway2": false,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    },
+    {
+      "id": "jinan_y1_metro_wave_front",
+      "name": "济南云巴1号线（彩波纹） · 新版LCD | A端车 →",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "8672BD",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -1.69,
+      "bogie2Position": 2.51,
+      "hasGangway1": false,
+      "hasGangway2": true,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car_wave.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas_wave.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_wave_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_front.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    },
+    {
+      "id": "jinan_y1_metro_wave_rear",
+      "name": "济南云巴1号线（彩波纹） · 新版LCD | B端车 ←",
+      "description": "最高时速：80 km/h\n建议加速度：1.0 m/s²\n最小转弯半径：50 m\n极限转弯半径：15 m",
+      "transportMode": "TRAIN",
+      "color": "8672BD",
+      "length": 8.8,
+      "width": 2.4,
+      "couplingPadding1": 0,
+      "couplingPadding2": 0,
+      "bogie1Position": -2.51,
+      "bogie2Position": 1.69,
+      "hasGangway1": true,
+      "hasGangway2": false,
+      "tags": [
+        "family:jinan_y1",
+        "iso_3166:CN",
+        "doors:1",
+        "length:8.8m"
+      ],
+      "models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/end_car_wave.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas_wave.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/body_wave_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/doors.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/doors_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        },
+        {
+          "modelResource": "mtr:jinan_y1/models/interaction.bbmodel",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/interaction_rear.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie1Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "bogie2Models": [
+        {
+          "modelResource": "mtr:jinan_y1/models/rubber_bogie.obj",
+          "textureResource": "mtr:jinan_y1/textures/atlas.png",
+          "modelPropertiesResource": "mtr:jinan_y1/properties/rubber_bogie.json",
+          "positionDefinitionsResource": "mtr:jinan_y1/properties/origin.json",
+          "flipTextureV": false
+        }
+      ],
+      "legacySpeedSoundBaseResource": "mpl_85",
+      "legacySpeedSoundCount": 48,
+      "legacyDoorSoundBaseResource": "mpl_85",
+      "legacyDoorCloseSoundTime": 1,
+      "scriptId": "jinan_y1_displays"
+    }
+  ],
+  "vehicleScripts": [
+    {
+      "id": "jinan_y1_displays",
+      "scriptLocations": [
+        "mtr:jinan_y1/scripts/displays.js"
+      ],
+      "dataFetchMode": "ALL",
+      "input": {
+        "doorZ": 0.41,
+        "doorwayX": [
+          1.03,
+          1.655
+        ],
+        "doorwayY": [
+          0.9675,
+          1.03
+        ],
+        "doorwayHalf": 0.625,
+        "lcdWidth": 1.48,
+        "lcdLower": [
+          1.023,
+          2.888
+        ],
+        "lcdUpper": [
+          0.827,
+          3.002
+        ],
+        "lcdOffset": 0.006,
+        "tvHalf": 0.227,
+        "tvRows": [
+          2.777,
+          2.985
+        ],
+        "tvZ": 3.608
+      }
+    }
+  ],
+  "rails": [
+    {
+      "id": "jinan_y1_steel_guideway",
+      "name": "济南云巴 | 钢制胶轮导轨梁",
+      "color": "9EAEB6",
+      "modelResource": "mtr:jinan_y1/models/steel_guideway.obj",
+      "textureResource": "mtr:jinan_y1/textures/atlas.png",
+      "flipTextureV": false,
+      "repeatInterval": 0.5,
+      "modelYOffset": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parts": [
+    {
+      "names": [
+        "floor"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "type": "FLOOR"
+    },
+    {
+      "names": [
+        "doorway_-1"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "type": "DOORWAY"
+    },
+    {
+      "names": [
+        "doorway_1"
+      ],
+      "positionDefinitions": [
+        "flipped"
+      ],
+      "type": "DOORWAY"
+    }
+  ],
+  "modelYOffset": 0
+}

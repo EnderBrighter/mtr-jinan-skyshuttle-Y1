@@ -1,0 +1,53 @@
+{
+  "parts": [
+    {
+      "names": [
+        "door_l_front"
+      ],
+      "positionDefinitions": [
+        "origin"
+      ],
+      "renderStage": "INTERIOR",
+      "doorAnimationType": "PLUG_SLOW",
+      "doorXMultiplier": -1.72,
+      "doorZMultiplier": 10.48
+    },
+    {
+      "names": [
+        "door_l_rear"
+      ],
+      "positionDefinitions": [
+        "origin"
+      ],
+      "renderStage": "INTERIOR",
+      "doorAnimationType": "PLUG_SLOW",
+      "doorXMultiplier": -1.72,
+      "doorZMultiplier": -10.48
+    },
+    {
+      "names": [
+        "door_r_front"
+      ],
+      "positionDefinitions": [
+        "origin"
+      ],
+      "renderStage": "INTERIOR",
+      "doorAnimationType": "PLUG_SLOW",
+      "doorXMultiplier": 1.72,
+      "doorZMultiplier": 10.48
+    },
+    {
+      "names": [
+        "door_r_rear"
+      ],
+      "positionDefinitions": [
+        "origin"
+      ],
+      "renderStage": "INTERIOR",
+      "doorAnimationType": "PLUG_SLOW",
+      "doorXMultiplier": 1.72,
+      "doorZMultiplier": -10.48
+    }
+  ],
+  "modelYOffset": 0
+}

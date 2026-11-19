@@ -1,0 +1,32 @@
+{
+  "parts": [
+    {
+      "names": [
+        "floor"
+      ],
+      "positionDefinitions": [
+        "origin"
+      ],
+      "type": "FLOOR"
+    },
+    {
+      "names": [
+        "doorway_-1"
+      ],
+      "positionDefinitions": [
+        "origin"
+      ],
+      "type": "DOORWAY"
+    },
+    {
+      "names": [
+        "doorway_1"
+      ],
+      "positionDefinitions": [
+        "origin"
+      ],
+      "type": "DOORWAY"
+    }
+  ],
+  "modelYOffset": 0
+}
