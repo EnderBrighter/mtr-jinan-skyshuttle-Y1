@@ -197,6 +197,58 @@ def nose_patch(m, group, mat, t0, t1, y0, y1, offset=0, divisions=6):
                    (cos(t),0,-sin(t)), smooth=True)
 
 
+LOWER_SHELL_TOP=.94
+
+
+def add_lower_shell(mesh,angles,side_edges):
+    """Continuous curved lower shell, with the livery boundary on its surface."""
+    floor=TREAD+.030
+    # The photographed white chin turns upward into the narrow dark side area.
+    stations=[(NOSE,.38,.57),(-2.10,.32,.65),(-1.75,floor,.79),
+              (-1.35,floor,.86),(-.80,floor,.86),(.50,floor,.86),
+              (3.22,floor,.86),(3.60,.33,.85),(END,.40,.84)]
+    heights=[(z,y) for z,y,_ in stations]
+    colours=[(z,y) for z,_,y in stations]
+    def station_value(values,z):
+        for (start,a),(end,b) in zip(values,values[1:]):
+            if z<=end:
+                blend=.5-.5*cos(pi*max(0,(z-start)/(end-start)))
+                return a+(b-a)*blend
+        return values[-1][1]
+    side_edges=sorted(set(side_edges)|{z for z,_,_ in stations})
+    # Resample the length so the end transitions share the smooth cross-section.
+    edges=sorted(set(side_edges)|{a+(b-a)*i/4 for a,b in zip(side_edges,side_edges[1:]) for i in range(1,4)})
+    outline=[(0,z) for z in reversed(edges[1:])]
+    outline.extend((t,NOSE) for t in angles)
+    outline.extend((pi,z) for z in edges[1:])
+    sections=[]
+    for angle,z in outline:
+        front=sin(angle) if z==NOSE else 0
+        bottom=station_value(heights,z)+.225*front**1.5
+        seam=station_value(colours,z)+.080*front**1.5
+        topx=width(LOWER_SHELL_TOP)
+        depth_top=interp(list(zip(HEIGHTS,DEPTHS)),LOWER_SHELL_TOP)
+        ring=[]
+        rows=[(1-t)*LOWER_SHELL_TOP+t*seam for t in (0,.25,.50,.75,1)]
+        rows += [(1-t)*seam+t*bottom for t in (.25,.5,.75,1)]
+        for y in rows:
+            f=(LOWER_SHELL_TOP-y)/(LOWER_SHELL_TOP-bottom)
+            # Elliptical undercut rounds inward toward the wheel contact level.
+            x=topx-.15*f-.103*(1-sqrt(max(0,1-f*f)))
+            depth=.27+(depth_top-.27)*(1-f)**.72
+            ring.append((x*cos(angle),y,z-depth*front))
+        x,y,zz=ring[-1]
+        ring.append((x-.045*cos(angle),y+.012,zz+.045*front))
+        sections.append(ring)
+    for (angle,_),first,last in zip(outline,sections,sections[1:]):
+        for i in range(len(first)-1):
+            colour='white' if i<4 else 'black'
+            mesh.face('shell',colour,[first[i],last[i],last[i+1],first[i+1]],
+                      (cos(angle),0,-sin(angle)) if i<8 else (0,-1,0),smooth=True)
+    for i in range(len(sections[0])-1):
+        mesh.face('shell','black',[sections[-1][i],sections[0][i],sections[0][i+1],sections[-1][i+1]],(0,0,1))
+
+
 def build_body():
     m = Mesh()
     # Conforming rings give the swept observation windows a continuous edge.
@@ -217,6 +269,8 @@ def build_body():
     divisions=(8,2,7,2,7,2,16)
     window_edges={}
     for y,Y in zip(panel_rows,panel_rows[1:]):
+        if y<LOWER_SHELL_TOP:
+            continue
         h = (y+Y)/2
         r,R=ring(y),ring(Y)
         for index,n in enumerate(divisions):
@@ -261,7 +315,7 @@ def build_body():
             m.face('salon',mat,[(0,y,NOSE),nose(a,y,-LINER_INSET),nose(b,y,-LINER_INSET)],(0,sign,0))
     angles=[i*pi/88 for i in range(89)]
     for a,b in zip(angles,angles[1:]):
-        for y,mat,sign in ((HEIGHTS[0],'black',-1),(HEIGHTS[-1],'roof',1)):
+        for y,mat,sign in ((HEIGHTS[-1],'roof',1),):
             m.face('shell',mat,[(0,y,NOSE),nose(a,y),nose(b,y)],(0,sign,0))
     m.box('shell','roof',(-.002,3.328,NOSE),(.002,3.33,END))
     # Real door and window openings are cut out of both the shell and its lining.
@@ -269,8 +323,11 @@ def build_body():
     w0,w1 = 1.68,3.80
     ys = sorted(set(panel_rows+[FLOOR,DOOR_TOP,1.72,1.80,2.64,2.73,2.44,2.49]))
     zs = [NOSE,-1.65,-.77,a,b,1.59,w0,w1,3.87,END]
+    add_lower_shell(m,ring_angles(LOWER_SHELL_TOP),zs)
     for side in (-1,1):
         for y,Y in zip(ys,ys[1:]):
+            if y<LOWER_SHELL_TOP:
+                continue
             h = (y+Y)/2
             for z,Z in zip(zs,zs[1:]):
                 if z == a and FLOOR<=h<=DOOR_TOP:
