@@ -528,6 +528,21 @@ def door_boxes():
                 yield door_box(name,side,leaf,'inside',y,Y,z,Z,(-.077,-.064))
             seam=sorted((DOOR_Z+leaf*DOOR_CENTER_CLEARANCE,DOOR_Z+leaf*.013))
             yield door_box(name,side,leaf,'rubber',sill,head,*seam,(-.087,-.076))
+    # MTR rounds cuboid lengths to whole pixels. Keep these centre stiles exactly
+    # one pixel wide so the narrow seam survives in the native game renderer.
+    for side in (-1,1):
+        for leaf in (-1,1):
+            name=door_name(side,leaf)
+            edge=DOOR_Z+leaf*.004
+            z,Z=sorted((edge,edge+leaf/16))
+            sill,head=FLOOR+.004,DOOR_TOP-.003
+            yield door_box(name,side,leaf,'inside',sill,head,z,Z,(-.078,-.0155))
+            for y,Y,mat in ((sill,1.46,'white'),(1.46,1.505,'accent'),
+                            (1.505,head,'black')):
+                yield door_box(name,side,leaf,mat,y,Y,z,Z,(-.065,.003))
+            if leaf==1:
+                yield door_box(name,side,leaf,'rubber',sill,head,
+                               DOOR_Z-.005,DOOR_Z-.005+1/16,(-.073,-.0105))
 
 
 def door_box(name,side,leaf,mat,y,Y,z,Z,depth):

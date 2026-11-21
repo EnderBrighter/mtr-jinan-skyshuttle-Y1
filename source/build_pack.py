@@ -322,7 +322,7 @@ def build_pack():
     dump(ROOT/'pack.mcmeta',{'pack':{'pack_format':22,
         'description':'济南高新云巴Y1线 · MTR + JCM\nGPT-6.2-sol (high) 接入Codex制作'}})
     (ROOT/'dist').mkdir(exist_ok=True)
-    with zipfile.ZipFile(ROOT/'dist/jinan_y1_mtr4_20261120_lower_shell_v2.zip','x',zipfile.ZIP_DEFLATED) as z:
+    with zipfile.ZipFile(ROOT/'dist/jinan_y1_mtr4_20261121_door_seam.zip','x',zipfile.ZIP_DEFLATED) as z:
         for p in [ROOT/'pack.mcmeta',ROOT/'pack.png',*sorted((ROOT/'assets').rglob('*'))]:
             if p.is_file():
                 z.write(p,p.relative_to(ROOT).as_posix())
